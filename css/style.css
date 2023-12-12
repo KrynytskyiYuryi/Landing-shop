@@ -1,0 +1,342 @@
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*--------------------*/
+
+.wraper {
+  font-family: Arial;
+  text-transform: uppercase;
+  min-height: 100%;
+  background: url("../images/bg_fon.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  padding: 5px;
+  display: grid;
+  grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / minmax(350px, 1fr);
+  gap: 10px;
+}
+
+.heder {
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / 20% 75% 5%;
+  justify-items: center;
+  align-items: center;
+  background: rgba(21, 21, 21, 0.6);
+  border-radius: 10px;
+}
+.logo {
+  background: rgba(189, 108, 8, 0.8);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.heder_logo {
+  display: block;
+  margin: 5px auto;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.heder_list {
+  display: grid;
+  grid-template: 60px/ 1fr 1fr 1fr;
+  gap: 40px;
+  justify-items: center;
+  align-items: end;
+}
+.heder_link {
+  font-size: clamp(10px, 3vw, 15px);
+  color: white;
+  font-weight: bolder;
+}
+.maine {
+  display: grid;
+  grid-template: 100px 1fr / minmax(100px, 200px);
+  grid-template-areas:
+    "side title"
+    "side content";
+  gap: 20px;
+}
+.maine_title {
+  width: 140px;
+  height: 40px;
+  grid-area: title;
+  background: rgba(21, 21, 21, 0.6);
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+}
+.title_text {
+  padding: 5px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+.side_bar {
+  grid-area: side;
+  display: grid;
+  grid-template: 1fr/ 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  position: relative;
+  background: rgba(21, 21, 21, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+}
+.side_bar_anim_01 {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  animation-name: anim-circle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 3s;
+}
+.side_bar_anim_02 {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  animation-name: anim-circle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 2s;
+}
+.side_bar_anim_03 {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  animation-name: anim-circle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.side_bar_anim_04 {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  animation-name: anim-circle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 1s;
+}
+@keyframes anim-circle {
+  0% {
+    top: 2%;
+  }
+  50% {
+    border-radius: 20%;
+    background-color: rgba(189, 108, 8, 0.8);
+  }
+  100% {
+    top: 95%;
+  }
+}
+
+.content {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 50px;
+}
+.content_item {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto 1fr/ 1fr;
+}
+.item_image {
+  position: relative;
+  padding: 0px 0px 90% 0px;
+  margin: 0px 0px 10px 0px;
+}
+.item_image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.item_text {
+  padding-top: 10px;
+  padding-left: 5px;
+  background: rgba(21, 21, 21, 0.7);
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+.footer {
+  background: rgba(21, 21, 21, 0.7);
+  border-radius: 10px;
+  text-align: center;
+}
+.footer_text {
+  font-size: 10px;
+  color: white;
+  padding-top: 30px;
+}
+.pop_up {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  transition: all 0.8s ease 0s;
+}
+.pop_up:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pop_up_body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+}
+.pop_up_content {
+  position: relative;
+  background-color: #fff;
+  color: #000;
+  max-width: 800px;
+}
+.pop_up_close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.pop_up_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.pop_up_imeges {
+  display: grid;
+  grid-template: minmax(100px, 1fr) / repeat(3, minmax(100px, 250px));
+  position: relative;
+  padding: 5px 10px 5% 10px;
+  gap: 5px;
+}
+.pop_up_imeges img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.pop_up_text {
+  font-size: 15px;
+  padding: 10px 10px 50px 10px;
+}
+.prise {
+  font-size: 18px;
+  font-weight: bold;
+}
+.pop_up_buton {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bolder;
+  bottom: 10px;
+  left: 50%;
+  background: rgba(41, 39, 245, 0.8);
+  height: 30px;
+  width: 110px;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+}
